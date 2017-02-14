@@ -1,28 +1,29 @@
-# Sample Vagrant + Chef-Solo
+# Sample Chef Solo
 
-Create and setup a development environment in a VM
+Create and setup a development environment
 
 
-## Software Installed
-- Ubuntu 64
-- Chef
-- Apache
+## Installs
+
+- Apache Server
 
 ## Prerequisites
-- Vagrant
-- VirtualBox
+- Vagrant *(when runnning on Vagrant)*
+- Virtualbox *(when runnign on Vagrant)*
+- chef-solo *(when running locally)*
 
 ## Run
+
+You can run with Vagrant or locally
+
+### On Vagrant
 ```bash
 git clone <this repo>
 cd <this repo>
 
-# start the vm
+# start the vm and provision (with chef-solo)
 vagrant up
 
 # see the server running
 curl localhost:8888
-
-# ssh into the vm
-vagrant ssh
 ```
