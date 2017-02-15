@@ -65,9 +65,13 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      "run_list": [ "recipe[apt]", "recipe[phpapp]" ],
-      "apache": {"default_site_enabled": true}
+      "run_list": [
+        "recipe[apt]",
+        "recipe[phpapp]"
+      ],
+      "apache": {
+        "default_site_enabled": true
+      }
     }
-    # chef.json = { :apache => { :default_site_enabled => true } }
   end
 end
